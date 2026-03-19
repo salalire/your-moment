@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h2>Login</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Username">
+
+    <input type="password" name="password" placeholder="Password">
+
+    <button type="submit">Login</button>
+
+</form>
+
+</div>
+
+{% for message in messages %}
+<div class="alert">
+    {{ message }}
+</div>
+{% endfor %}
+
+<script>
+
+setTimeout(function(){
+    const alert = document.querySelector(".alert");
+    if(alert){
+        alert.style.opacity = "0";
+        alert.style.transform = "translateY(-20px)";
+    }
+},3000);
+
+</script>
+
+</body>
+</html>

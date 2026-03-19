@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="create-album-container">
+
+<h2>Create New Album</h2>
+
+<form method="POST" class="album-form">
+    {% csrf_token %}
+
+    <input type="text" name="title" placeholder="Album Title" required>
+
+    <textarea name="description" placeholder="Album Description"></textarea>
+
+    <button type="submit">Create Album</button>
+
+</form>
+
+</div>
+
+{% endblock %}

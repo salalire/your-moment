@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="albums-container">
+
+<h1 class="albums-title">My Albums</h1>
+
+<div class="albums-grid">
+
+{% for album in albums %}
+
+<div class="album-card">
+
+<h3>{{ album.title }}</h3>
+
+<p>{{ album.description|truncatewords:10 }}</p>
+
+<a href="{% url 'album_detail' album.id %}" class="album-btn">
+Open Album
+</a>
+
+</div>
+
+{% empty %}
+
+<p class="no-albums">You don't have any albums yet.</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}

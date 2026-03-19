@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="gallery-container">
+
+<h1 class="gallery-title">{{ album.title }}</h1>
+
+<p class="gallery-description">{{ album.description }}</p>
+
+<a href="{% url 'upload_photo' album.id %}" class="upload-btn">
+Upload Photo
+</a>
+
+<div class="photo-grid">
+
+{% for photo in photos %}
+
+<div class="photo-card">
+
+<img src="{{ photo.image.url }}" alt="photo">
+
+<p>{{ photo.caption }}</p>
+
+</div>
+
+{% empty %}
+
+<p class="no-photos">No photos in this album yet.</p>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}

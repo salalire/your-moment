@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="home-container">
+
+<div class="hero">
+
+<h1>Welcome to YourMoment</h1>
+
+<p>Capture your memories. Organize your life. Share your story.</p>
+
+{% if not request.user.is_authenticated %}
+<a href="{% url 'register' %}" class="hero-btn">Get Started</a>
+{% endif %}
+
+</div>
+
+<div class="features">
+
+<div class="feature-card">
+    <img src="{% static 'images/wedding1.jpg' %}" alt="wedding" class="feature-image">
+    <h3>Create Albums</h3>
+    <p>Organize your photos into beautiful collections.</p>
+</div>
+
+<div class="feature-card">
+<img src="{% static 'images/graduation1.jpg' %}" alt="graduation" class="feature-image">
+<h3>Upload Photos</h3>
+<p>Store your favorite memories safely.</p>
+</div>
+
+<div class="feature-card">
+<img src="{% static 'images/birthday1.jpg' %}" alt="birthday" class="feature-image">
+<h3>View Anywhere</h3>
+<p>Access your albums anytime, anywhere.</p>
+</div>
+
+<div class="feature-card">
+<img src="{% static 'images/wedding2.jpg' %}" alt="wedding" class="feature-image">
+<h3>Capture Your Love Story</h3>
+<p>Preserve every magical moment of your special day in beautifully organized albums that last forever.</p>
+</div>
+
+<div class="feature-card">
+<img src="{% static 'images/birthday3.jpg' %}" alt="birthday" class="feature-image">
+<h3>Make Every Birthday Unforgettable</h3>
+<p>Keep the smiles, laughter, and surprises in one place and revisit your happiest celebrations.</p>
+</div>
+
+<div class="feature-card">
+<img src="{% static 'images/graduation2.jpg' %}" alt="graduation" class="feature-image">
+<h3>Celebrate Your Achievements</h3>
+<p>Turn your graduation memories into a timeless collection and relive the joy of your success anytime.</p>
+</div>
+
+
+<div class="feature-card">
+<img src="{% static 'images/wedding3.jpg' %}" alt="wedding" class="feature-image">
+<h3>Timeless Wedding Memories</h3>
+<p>From vows to celebrations, keep every detail محفوظ in a beautifully curated digital album.</p>
+</div>
+
+
+<div class="feature-card">
+<img src="{% static 'images/graduation3.jpg' %}" alt="graduation" class="feature-image">
+<h3>Your Journey, Your Pride</h3>
+<p>Document your academic milestone with elegance and relive your proudest moments.</p>
+</div>
+
+
+<div class="feature-card">
+<img src="{% static 'images/g5.jpg' %}" alt="graduation" class="feature-image">
+<h1>Capture Your Moments, Relive Forever</h1>
+<p>Your memories deserve more than storage — turn them into beautiful stories.</p>
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

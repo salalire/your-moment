@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard">
+
+<h1>Welcome, {{ request.user.username }}</h1>
+
+<p>Manage your photo albums easily.</p>
+
+<div class="dashboard-buttons">
+
+<a href="{% url 'create_album' %}" class="btn">Create Album</a>
+
+<a href="{% url 'list_albums' %}" class="btn">View My Albums</a>
+
+</div>
+
+</div>
+
+{% endblock %}
