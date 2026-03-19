@@ -95,3 +95,4 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 # Login URLs
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/accounts/dashboard'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
